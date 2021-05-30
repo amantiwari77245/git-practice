@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Profile from "./profile"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  constructor(){
+    super()
+    this.state = {
+      name: "Aman",
+      email: "at77245@gmail.com",
+      add: "surbhi vihar bhopal"
+    }
+
+  }
+  render(){
+    return(
+
+      
+      
+      <div>
+        
+        <Profile />
+        <h1>hello{this.state.name}</h1>
+
+        <h1>id{this.state.email}</h1>
+        
+        <h1>my{this.state.add}</h1>
+      
+      
+      </div>
+    )
+  }
+   
+
 }
+  
+  
 
 export default App;
